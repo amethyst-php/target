@@ -87,6 +87,11 @@ return [
             |
             */
             'authorizer' => Railken\Amethyst\Authorizers\TargetAuthorizer::class,
+
+            'groups' => [
+                'buyer',
+                'seller',
+            ],
         ],
     ],
 

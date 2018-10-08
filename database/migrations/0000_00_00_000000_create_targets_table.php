@@ -16,6 +16,7 @@ class CreateTargetsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
+            $table->string('group');
             $table->timestamps();
             $table->softDeletes();
         });

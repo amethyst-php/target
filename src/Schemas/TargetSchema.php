@@ -2,6 +2,7 @@
 
 namespace Railken\Amethyst\Schemas;
 
+use Illuminate\Support\Facades\Config;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
@@ -20,6 +21,7 @@ class TargetSchema extends Schema
                 ->setRequired(true)
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('description'),
+            Attributes\EnumAttribute::make('group', Config::get('amethyst.target.managers.target.groups')),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
