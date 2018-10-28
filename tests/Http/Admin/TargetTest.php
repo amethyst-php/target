@@ -25,9 +25,9 @@ class TargetTest extends BaseTest
     protected $group = 'admin';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.target.http.admin.target';
+    protected $route = 'admin.target';
 }

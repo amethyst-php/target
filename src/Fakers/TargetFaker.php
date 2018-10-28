@@ -19,7 +19,7 @@ class TargetFaker extends Faker
         $bag = new Bag();
         $bag->set('name', $faker->name);
         $bag->set('description', $faker->text);
-        $bag->set('group', Config::get('amethyst.target.managers.target.groups')[0]);
+        $bag->set('group', Config::get('amethyst.target.data.target.groups')[0]);
 
         return $bag;
     }

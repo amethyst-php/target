@@ -21,7 +21,7 @@ class TargetSchema extends Schema
                 ->setRequired(true)
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('description'),
-            Attributes\EnumAttribute::make('group', Config::get('amethyst.target.managers.target.groups')),
+            Attributes\EnumAttribute::make('group', Config::get('amethyst.target.data.target.groups')),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

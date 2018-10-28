@@ -12,7 +12,7 @@ class CreateTargetsTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('amethyst.target.managers.target.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.target.data.target.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
@@ -27,6 +27,6 @@ class CreateTargetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('amethyst.target.managers.target.table'));
+        Schema::dropIfExists(Config::get('amethyst.target.data.target.table'));
     }
 }

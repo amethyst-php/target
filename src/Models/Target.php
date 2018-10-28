@@ -4,23 +4,21 @@ namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Facades\Config;
-use Railken\Amethyst\Schemas\TargetSchema;
+use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
 
 class Target extends Model implements EntityContract
 {
-    use SoftDeletes;
+    use SoftDeletes, ConfigurableModel;
 
     /**
-     * Creates a new instance of the model.
+     * Create a new Eloquent model instance.
      *
      * @param array $attributes
      */
     public function __construct(array $attributes = [])
     {
+        $this->ini('amethyst.target.data.target');
         parent::__construct($attributes);
-        $this->table = Config::get('amethyst.target.managers.target.table');
-        $this->fillable = (new TargetSchema())->getNameFillableAttributes();
     }
 }
