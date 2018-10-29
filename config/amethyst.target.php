@@ -20,7 +20,7 @@ return [
             'validator'  => Railken\Amethyst\Validators\TargetValidator::class,
             'authorizer' => Railken\Amethyst\Authorizers\TargetAuthorizer::class,
             'faker'      => Railken\Amethyst\Fakers\TargetFaker::class,
-            'manager'    => Railken\Amethyst\Fakers\TargetManager::class,
+            'manager'    => Railken\Amethyst\Managers\TargetManager::class,
             'groups'     => [
                 'buyer',
                 'seller',
