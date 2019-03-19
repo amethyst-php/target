@@ -3,6 +3,8 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
@@ -25,7 +27,7 @@ class Targetable extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function target()
+    public function target(): BelongsTo
     {
         return $this->belongsTo(Target::class);
     }
@@ -33,7 +35,7 @@ class Targetable extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function targetable()
+    public function targetable(): MorphTo
     {
         return $this->morphTo();
     }
