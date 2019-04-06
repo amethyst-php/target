@@ -9,4 +9,4 @@ return [
             'description' => 'Gruppo di appartenenza del target'
         ]
     ]
-]
+];
