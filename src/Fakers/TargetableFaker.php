@@ -17,7 +17,7 @@ class TargetableFaker extends Faker
 
         $bag = new Bag();
         $bag->set('target', TargetFaker::make()->parameters()->toArray());
-        $bag->set('targetable_type', \Railken\Amethyst\Models\Foo::class);
+        $bag->set('targetable_type', 'foo');
         $bag->set('targetable', FooFaker::make()->parameters()->toArray());
 
         return $bag;
