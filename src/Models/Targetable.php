@@ -29,7 +29,7 @@ class Targetable extends Model implements EntityContract
      */
     public function target(): BelongsTo
     {
-        return $this->belongsTo(Target::class);
+        return $this->belongsTo(config('amethyst.target.data.target.model'));
     }
 
     /**
