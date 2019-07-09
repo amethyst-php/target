@@ -3,14 +3,14 @@
 return [
     'table'      => 'amethyst_targetables',
     'comment'    => 'Targetable',
-    'model'      => Railken\Amethyst\Models\Targetable::class,
-    'schema'     => Railken\Amethyst\Schemas\TargetableSchema::class,
-    'repository' => Railken\Amethyst\Repositories\TargetableRepository::class,
-    'serializer' => Railken\Amethyst\Serializers\TargetableSerializer::class,
-    'validator'  => Railken\Amethyst\Validators\TargetableValidator::class,
-    'authorizer' => Railken\Amethyst\Authorizers\TargetableAuthorizer::class,
-    'faker'      => Railken\Amethyst\Fakers\TargetableFaker::class,
-    'manager'    => Railken\Amethyst\Managers\TargetableManager::class,
+    'model'      => Amethyst\Models\Targetable::class,
+    'schema'     => Amethyst\Schemas\TargetableSchema::class,
+    'repository' => Amethyst\Repositories\TargetableRepository::class,
+    'serializer' => Amethyst\Serializers\TargetableSerializer::class,
+    'validator'  => Amethyst\Validators\TargetableValidator::class,
+    'authorizer' => Amethyst\Authorizers\TargetableAuthorizer::class,
+    'faker'      => Amethyst\Fakers\TargetableFaker::class,
+    'manager'    => Amethyst\Managers\TargetableManager::class,
     'attributes' => [
         'targetable' => [
             'options' => [],
