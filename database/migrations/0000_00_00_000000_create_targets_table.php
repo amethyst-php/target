@@ -14,7 +14,7 @@ class CreateTargetsTable extends Migration
     {
         Schema::create(Config::get('amethyst.target.data.target.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name')->index();
             $table->text('description')->nullable();
             $table->string('group');
             $table->timestamps();
