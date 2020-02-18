@@ -21,12 +21,12 @@ class TargetableSchema extends Schema
                 ->setRelationName('target')
                 ->setRelationManager(TargetManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('targetable_type', app('amethyst')->getMorphListable('targetable', 'targetable'))
+            Attributes\EnumAttribute::make('targetable_type', app('amethyst')->getDataNames())
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('targetable_id')
                 ->setRelationKey('targetable_type')
                 ->setRelationName('targetable')
-                ->setRelations(app('amethyst')->getMorphRelationable('targetable', 'targetable'))
+                ->setRelations(app('amethyst')->getDataManagers())
                 ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
