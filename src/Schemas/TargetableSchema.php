@@ -21,7 +21,7 @@ class TargetableSchema extends Schema
                 ->setRelationName('target')
                 ->setRelationManager(TargetManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('targetable_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('targetable_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('targetable_id')
                 ->setRelationKey('targetable_type')
